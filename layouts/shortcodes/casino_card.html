@@ -1,0 +1,35 @@
+<div style="border: 2px solid #e2e8f0; border-radius: 12px; padding: 20px; display: flex; align-items: center; justify-content: space-between; background: #ffffff; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 25px; flex-wrap: wrap; gap: 15px; font-family: sans-serif;">
+  
+  <!-- 左侧：Logo与信息 -->
+  <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+    <!-- 模拟Logo位置 -->
+    <div style="width: 100px; height: 100px; background: #1e293b; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #ffffff; font-size: 1.2rem; text-align: center; line-height: 1.2;">
+      {{ .Get "name" }}
+    </div>
+    
+    <!-- 核心卖点与福利 -->
+    <div>
+      <h3 style="margin: 0 0 8px 0; font-size: 1.4rem; color: #0f172a;">{{ .Get "name" }}</h3>
+      <div style="background: #fef2f2; color: #ef4444; padding: 6px 12px; border-radius: 6px; font-weight: bold; font-size: 1.1rem; display: inline-block; margin-bottom: 8px;">
+        🎁 {{ .Get "bonus" }}
+      </div>
+      <p style="margin: 0; font-size: 0.95rem; color: #475569;">
+        ✅ <span style="font-weight:bold; color:#10b981;">VPN Friendly</span> | ⚡ Instant Crypto Payout
+      </p>
+    </div>
+  </div>
+
+  <!-- 右侧：行动召唤按钮 (CTA) -->
+  <div style="text-align: center;">
+    <a href="{{ .Get "link" }}" target="_blank" rel="nofollow noopener" style="display: inline-block; background: #10b981; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 900; font-size: 1.2rem; text-transform: uppercase; box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.4); transition: all 0.2s;">
+      Claim Bonus ➔
+    </a>
+    <p style="margin: 8px 0 0 0; font-size: 0.75rem; color: #94a3b8;">No KYC Required</p>
+  </div>
+  
+</div>
+
+<!-- 增加按钮悬停动画的简易脚本 -->
+<style>
+  a[href]:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6) !important; }
+</style>
